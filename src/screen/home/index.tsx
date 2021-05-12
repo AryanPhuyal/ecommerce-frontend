@@ -1,10 +1,18 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import NavBar from "../../component/layout/navigation/navbar";
 import TopBar from "../../component/layout/navigation/topNav";
 import HomeSlider from "../../component/homeSlider/homeslider";
 import HomeScreenCategoryList from "../../component/homeCategoryContent/homeCategoryList";
+import ProductSlider from "../../component/productSlider/productSlider";
+import HomeScreenCategorySlider from "../../component/homeScreenCategories/homeScreenCategories";
+import { fetchCategory } from "../../store/action/category";
+import { fetchFlashProduct } from "../../store/action/product";
 
 const Index = () => {
+  const dispatch = useDispatch();
+  dispatch(fetchCategory());
+  dispatch(fetchFlashProduct());
   return (
     <>
       <div id="page" className="hfeed site">
@@ -17,6 +25,11 @@ const Index = () => {
             {/* Home screen Category Listt */}
             <HomeScreenCategoryList />
           </div>
+          {/* Hot New Arrivial */}
+          <ProductSlider />
+
+          {/* home Screen Category SLider */}
+          <HomeScreenCategorySlider />
         </div>
 
         {/* Home Screen Hot new Arrval */}

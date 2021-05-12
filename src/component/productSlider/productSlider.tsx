@@ -1,4 +1,5 @@
 import React from "react";
+import ProductComponent from "./productSliderComponent";
 
 const productSlider = () => {
   return (
@@ -19,51 +20,9 @@ const productSlider = () => {
         <div className="container-fluid">
           <div className="woocommerce columns-8">
             <div className="products">
-              <div className="product">
-                <div className="yith-wcwl-add-to-wishlist">
-                  <a
-                    href="wishlist.html"
-                    rel="nofollow"
-                    className="add_to_wishlist"
-                  >
-                    Add to Wishlist
-                  </a>
-                </div>
-                <a
-                  href="single-product-fullwidth.html"
-                  className="woocommerce-LoopProduct-link"
-                >
-                  <img
-                    src="assets/images/products/9.jpg"
-                    width="224"
-                    height="197"
-                    className="wp-post-image"
-                    alt=""
-                  />
-                  <span className="price">
-                    <ins>
-                      <span className="amount"> </span>
-                    </ins>
-                    <span className="amount"> 456.00</span>
-                  </span>
-                  {/* /.price */}
-                  <h2 className="woocommerce-loop-product__title">
-                    Watch Stainless with Grey Suture Leather Strap
-                  </h2>
-                </a>
-                <div className="hover-area">
-                  <a
-                    className="button add_to_cart_button"
-                    href="cart.html"
-                    rel="nofollow"
-                  >
-                    Add to cart
-                  </a>
-                  <a className="add-to-compare-link" href="compare.html">
-                    Add to compare
-                  </a>
-                </div>
-              </div>
+              {/* product outer */}
+              <ProductComponent />
+
               {/* /.product-outer */}
             </div>
           </div>
